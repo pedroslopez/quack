@@ -7,31 +7,35 @@
   <meta name="description" content="quack" />
   <style type="text/css">
     * {
-      padding: 0;
-      margin: 0;
+       padding: 0;
+       margin: 0;
     }
-
+    
     .video-background {
-      position: relative;
-      overflow: hidden;
-      width: 100vw;
-      height: 100vh;
-
-      iframe {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        width: 100vw;
-        height: 100vh;
-        transform: translate(-50%, -50%);
-
-        @media (min-aspect-ratio: 16/9) {
-          height: 56.25vw
-        }
-
-        @media (max-aspect-ratio: 16/9) {
-          width: 177.78vh
-        }
+       position: relative;
+       overflow: hidden;
+       width: 100vw;
+       height: 100vh;
+    }
+    
+    .video-background iframe {
+       position: absolute;
+       top: 50%;
+       left: 50%;
+       width: 100vw;
+       height: 100vh;
+       transform: translate(-50%, -50%);
+    }
+    
+    @media (min-aspect-ratio: 1.7777777778) {
+       .video-background iframe {
+         height: 56.25vw;
+      }
+    }
+    
+    @media (max-aspect-ratio: 1.7777777778) {
+       .video-background iframe {
+         width: 177.78vh;
       }
     }
   </style>
